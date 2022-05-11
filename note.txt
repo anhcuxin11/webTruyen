@@ -1,0 +1,18 @@
+ui: user interface-giao dien nguoi dung 
+web:
+https://quachquynh.com/tag/laravel-framework/
+https://hoangan.net/cau-truc-thu-muc-trong-laravel-framework-8.html
+https://programmierfrage.com/items/undefined-type-request-intelephense1009
+https://allaravel.com/series/hoc-laravel-tu-a-den-z-mien-phi
+
+Bắt đầu:
+-tạo .htaccess
+- server.php->index.php
+- routes/web.php: tên file chạy khi mở ứng dụng
+- .env -> đổi tên database
+- config/database.php
+- php artisan migrate: tránh sai cấu hình yêu cầu của laravel-> tạo 5 table DB
+- cài node_modules:   gitbase: npm install
+- php artisan make:model Truyen     //Tạo file Truyen.php trong model
+- php artisan make:controller TruyenController --resource   //Quy chuẩn cách đặt tên
+- php artisan route:list    //Xem route
