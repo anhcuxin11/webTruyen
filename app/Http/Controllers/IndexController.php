@@ -8,16 +8,16 @@ use App\Models\Truyen;
 
 class IndexController extends Controller
 {
-    public function home(){
-        $danhmuc=DanhmucTruyen::orderBy('id','DESC')->get();
+    public function home() {
+        $danhmuc=DanhmucTruyen::orderBy('id', 'DESC')->get();
         $truyen = Truyen::orderBy('id','DESC')->where('kichhoat',0)->get();
         return view('pages.home')->with(compact('danhmuc','truyen'));
     }
-    public function danhmuc($slug){
+    public function danhmuc($slug) {
         return view('pages.truyen');
     }
-    public function xemtruyen($slug){
-        $danhmuc=DanhmucTruyen::orderBy('id','DESC')->get();
+    public function xemtruyen($slug) {
+        $danhmuc=DanhmucTruyen::orderBy('id', 'DESC')->get();
         return view('pages.chapter')->with(compact('danhmuc'));
     }
 }

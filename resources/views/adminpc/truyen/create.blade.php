@@ -60,7 +60,7 @@
                             </select>               
                         </div>
                         <button type="submit" name = "themtruyen" class="btn btn-primary">Thêm</button>
-                        </form>
+                    </form>
                 </div>
             </div>
         </div>

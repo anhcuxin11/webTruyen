@@ -16,10 +16,10 @@ class Truyen extends Model
     protected $primaryKey = 'id';
     protected $table = 'truyen';
 
-    public function danhmuctruyen(){
-        return $this->belongsTo('App\Models\DanhmucTruyen','danhmuc_id','id');
+    public function danhmuctruyen() {
+        return $this->belongsTo('App\Models\DanhmucTruyen', 'danhmuc_id', 'id');
     }
-    public function chapter(){
-        return $this->hasMany('App\Models\Chapter','truyen_id','id');
+    public function chapter() {
+        return $this->hasMany('App\Models\Chapter', 'truyen_id', 'id');
     }
 }

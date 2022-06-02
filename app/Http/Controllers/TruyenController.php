@@ -14,7 +14,7 @@ class TruyenController extends Controller
      */
     public function index()
     {
-        $list_truyen = Truyen::with('danhmuctruyen')->orderBy('id','DESC')->get();      
+        $list_truyen = Truyen::with('danhmuctruyen')->orderBy('id', 'DESC')->get();      
         return view('adminpc.truyen.index')->with(compact('list_truyen'));
     }
 
@@ -25,7 +25,7 @@ class TruyenController extends Controller
      */
     public function create()
     {
-        $danhmuc = DanhmucTruyen::orderBy('id','DESC')->get();
+        $danhmuc = DanhmucTruyen::orderBy('id', 'DESC')->get();
         return view('adminpc.truyen.create')->with(compact('danhmuc'));
     }
 
@@ -69,9 +69,9 @@ class TruyenController extends Controller
         $get_image = $request->hinhanh;
         $path = 'public/uploads/truyen/';
         $get_name_image = $get_image->getClientOriginalName();//lay ten file
-        $name_image = current(explode('.',$get_name_image));//lay ten anh
+        $name_image = current(explode('.', $get_name_image));//lay ten anh
         $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-        $get_image->move($path,$new_image);
+        $get_image->move($path, $new_image);
 
         $truyen->hinhanh = $new_image;
 
@@ -100,8 +100,8 @@ class TruyenController extends Controller
     {
         //$truyen = Truyen::with('danhmuctruyen')->where('id',$id)->orderBy('id','DESC')->get();
         $truyen = Truyen::find($id);
-        $danhmuc = DanhmucTruyen::orderBy('id','DESC')->get();
-        return view('adminpc.truyen.edit')->with(compact('truyen','danhmuc'));
+        $danhmuc = DanhmucTruyen::orderBy('id', 'DESC')->get();
+        return view('adminpc.truyen.edit')->with(compact('truyen', 'danhmuc'));
     }
 
     /**
@@ -149,9 +149,9 @@ class TruyenController extends Controller
 
             $path = 'public/uploads/truyen/';
             $get_name_image = $get_image->getClientOriginalName();//lay ten file
-            $name_image = current(explode('.',$get_name_image));//lay ten anh
+            $name_image = current(explode('.', $get_name_image));//lay ten anh
             $new_image = $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move($path,$new_image);
+            $get_image->move($path, $new_image);
 
             $truyen->hinhanh = $new_image;
         }
@@ -174,6 +174,6 @@ class TruyenController extends Controller
             unlink($path);
         }
         Truyen::find($id)->delete();
-        return redirect()->back()->with('status','Xóa truyện thành công');
+        return redirect()->back()->with('status', 'Xóa truyện thành công');
     }
 }

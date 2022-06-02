@@ -54,7 +54,7 @@
                             </select>               
                         </div>
                         <button type="submit" name = "themdanhmuc" class="btn btn-primary">Cập nhật</button>
-                        </form>
+                    </form>
                 </div>
             </div>
         </div>

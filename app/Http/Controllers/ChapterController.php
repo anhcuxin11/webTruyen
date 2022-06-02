@@ -15,8 +15,7 @@ class ChapterController extends Controller
      */
     public function index()
     {
-        $chapter = Chapter::with('truyen')->orderBy('id','DESC')->get();
-        // dd($chapter);
+        $chapter = Chapter::with('truyen')->orderBy('id', 'DESC')->get();
         return view('adminpc.chapter.index')->with(compact('chapter'));
     }
 
@@ -27,7 +26,7 @@ class ChapterController extends Controller
      */
     public function create()
     {
-        $truyen = Truyen::orderBy('id','DESC')->get();
+        $truyen = Truyen::orderBy('id', 'DESC')->get();
         return view('adminpc.chapter.create')->with(compact('truyen'));
     }
 
@@ -91,7 +90,7 @@ class ChapterController extends Controller
     public function edit($id)
     {
         $chapter = Chapter::find($id);
-        $truyen = Truyen::orderBy('id','DESC')->get();
+        $truyen = Truyen::orderBy('id', 'DESC')->get();
         return view('adminpc.chapter.edit')->with(compact('truyen','chapter'));
     }
 

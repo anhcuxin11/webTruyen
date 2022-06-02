@@ -27,8 +27,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{url('/')}}">Trang chủ</a>
-                      </li>
-                      
+                      </li>                     
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Danh mục 
@@ -38,8 +37,7 @@
                             <a class="dropdown-item" href="{{url('danh-muc/'.$muc->slug_danhmuc)}}">{{$muc->tendanhmuc}}</a>
                           @endforeach
                         </div>
-                      </li>
-                      
+                      </li>                   
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                          Thể loại
@@ -48,7 +46,6 @@
                           <a class="dropdown-item" href="#">Action</a>
                         </div>
                       </li>
-
                     </ul>
                     <form class="d-flex">
                       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -71,7 +68,6 @@
                   <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
                 </div>
               </footer>
-
         </div>
 
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -81,7 +77,6 @@
             $('.owl-carousel').owlCarousel({
                 loop:true,
                 margin:10,
-                // nav:true,
                 responsive:{
                     0:{
                         items:1
